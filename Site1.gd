@@ -1,0 +1,6 @@
+extends Node2D
+
+
+func _ready():
+	get_tree().call_group("player", "set_total_survivor", 5)
+

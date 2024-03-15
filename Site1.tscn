@@ -1,0 +1,223 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/wall.tres" type="TileSet" id=1]
+[ext_resource path="res://Barricade.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Zombie.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Survivor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://HealthPack.tscn" type="PackedScene" id=6]
+[ext_resource path="res://AmmoPack.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/white.png" type="Texture" id=8]
+[ext_resource path="res://Exit_Site1.gd" type="Script" id=9]
+[ext_resource path="res://Site1.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 98, 98 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 2005, 706 )
+script = ExtResource( 10 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1177, -465 )
+scale = Vector2( 1, 1.2 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1181, -380 )
+scale = Vector2( 1, 1.44 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1183, -294 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1652, -395 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -478, 311 )
+rotation = -1.6158
+scale = Vector2( 1.75389, 2.53819 )
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -348, -823 )
+rotation = -2.0879
+scale = Vector2( 1.81677, 2.36979 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 673, -924 )
+rotation = -1.62397
+scale = Vector2( -3.66598, 2.15472 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 672, 178 )
+rotation = 1.57143
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 854, 189 )
+rotation = 1.33051
+
+[node name="StaticBody2D9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 733, 205 )
+rotation = -1.50272
+
+[node name="StaticBody2D10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 770, 185 )
+rotation = -1.51261
+
+[node name="StaticBody2D11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2081, -726 )
+rotation = -1.3506
+scale = Vector2( 2.45042, 2.73983 )
+
+[node name="Zombie" parent="." instance=ExtResource( 3 )]
+position = Vector2( -474, -540 )
+
+[node name="Zombie2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -911, 261 )
+
+[node name="Zombie3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -870, -350 )
+
+[node name="Zombie4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1094, -802 )
+
+[node name="Zombie5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -842, -959 )
+
+[node name="StaticBody2D12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 844, 235 )
+rotation = 1.78307
+
+[node name="Zombie6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -200, -552 )
+rotation = -0.397844
+
+[node name="Survivor" parent="." instance=ExtResource( 5 )]
+position = Vector2( -485, 495 )
+
+[node name="Survivor2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 684, 445 )
+
+[node name="Survivor3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 830, 342 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -720893, -1610612736, 0, -720892, -1610612736, 0, -720891, -1610612736, 0, -720890, -1610612736, 0, -589834, -1610612736, 0, -589833, -1610612736, 0, -589832, -1610612736, 0, -589831, -1610612736, 0, -589830, -1610612736, 0, -589829, -1610612736, 0, -589828, -1610612736, 0, -589827, -1610612736, 0, -589826, -1610612736, 0, -589825, -1610612736, 0, -655360, -1610612736, 0, -655359, -1610612736, 0, -655358, -1610612736, 0, -655357, -1610612736, 0, -655354, -1610612736, 0, -655353, -1610612736, 0, -655352, -1610612736, 0, -655351, -1610612736, 0, -655350, -1610612736, 0, -655349, -1610612736, 0, -655348, -1610612736, 0, -655347, -1610612736, 0, -655346, -1610612736, 0, -655345, -1610612736, 0, -655344, -1610612736, 0, -655343, -1610612736, 0, -655342, -1610612736, 0, -524298, -1610612736, 0, -589821, -1610612736, 0, -589818, -1610612736, 0, -589815, -1610612736, 0, -589810, -1610612736, 0, -589806, -1610612736, 0, -458762, -1610612736, 0, -524285, -1610612736, 0, -524282, -1610612736, 0, -524279, -1610612736, 0, -524274, -1610612736, 0, -524270, -1610612736, 0, -393226, -1610612736, 0, -393222, -1610612736, 0, -393221, -1610612736, 0, -393218, -1610612736, 0, -393217, -1610612736, 0, -458752, -1610612736, 0, -458743, -1610612736, 0, -458738, -1610612736, 0, -458734, -1610612736, 0, -327690, -1610612736, 0, -327686, -1610612736, 0, -393216, -1610612736, 0, -393199, -1610612736, 0, -393198, -1610612736, 0, -262159, -1610612736, 0, -262158, -1610612736, 0, -262157, -1610612736, 0, -262156, -1610612736, 0, -262155, -1610612736, 0, -262154, -1610612736, 0, -262150, -1610612736, 0, -327680, -1610612736, 0, -327676, -1610612736, 0, -327675, -1610612736, 0, -327662, -1610612736, 0, -196623, -1610612736, 0, -196614, -1610612736, 0, -262144, -1610612736, 0, -262140, -1610612736, 0, -262139, -1610612736, 0, -262136, -1610612736, 0, -262132, -1610612736, 0, -262126, -1610612736, 0, -131087, -1610612736, 0, -131078, -1610612736, 0, -196608, -1610612736, 0, -196604, -1610612736, 0, -196603, -1610612736, 0, -196600, -1610612736, 0, -196599, -1610612736, 0, -196598, -1610612736, 0, -196597, -1610612736, 0, -196596, -1610612736, 0, -196590, -1610612736, 0, -65551, -1610612736, 0, -65550, -1610612736, 0, -65549, -1610612736, 0, -65548, -1610612736, 0, -65547, -1610612736, 0, -65546, -1610612736, 0, -65542, -1610612736, 0, -131072, -1610612736, 0, -131068, -1610612736, 0, -131067, -1610612736, 0, -131064, -1610612736, 0, -131063, -1610612736, 0, -131062, -1610612736, 0, -131061, -1610612736, 0, -131060, -1610612736, 0, -131054, -1610612736, 0, -10, -1610612736, 0, -6, -1610612736, 0, -5, -1610612736, 0, -4, -1610612736, 0, -3, -1610612736, 0, -2, -1610612736, 0, -1, -1610612736, 0, -65536, -1610612736, 0, -65518, -1610612736, 0, 65526, -1610612736, 0, 18, -1610612736, 0, 131062, -1610612736, 0, 65539, -1610612736, 0, 65540, -1610612736, 0, 65543, -1610612736, 0, 65544, -1610612736, 0, 65545, -1610612736, 0, 65546, -1610612736, 0, 65550, -1610612736, 0, 65551, -1610612736, 0, 65554, -1610612736, 0, 196598, -1610612736, 0, 196602, -1610612736, 0, 196605, -1610612736, 0, 196606, -1610612736, 0, 131075, -1610612736, 0, 131081, -1610612736, 0, 131087, -1610612736, 0, 131090, -1610612736, 0, 262134, -1610612736, 0, 262138, -1610612736, 0, 262142, -1610612736, 0, 196611, -1610612736, 0, 196617, -1610612736, 0, 196623, -1610612736, 0, 196626, -1610612736, 0, 327670, -1610612736, 0, 327674, -1610612736, 0, 327678, -1610612736, 0, 262147, -1610612736, 0, 262153, -1610612736, 0, 262159, -1610612736, 0, 262162, -1610612736, 0, 393206, -1610612736, 0, 393207, -1610612736, 0, 393208, -1610612736, 0, 393209, -1610612736, 0, 393210, -1610612736, 0, 393211, -1610612736, 0, 393212, -1610612736, 0, 393213, -1610612736, 0, 393214, -1610612736, 0, 393215, -1610612736, 0, 327680, -1610612736, 0, 327681, -1610612736, 0, 327682, -1610612736, 0, 327683, -1610612736, 0, 327684, -1610612736, 0, 327685, -1610612736, 0, 327686, 0, 0, 327687, -1610612736, 0, 327688, -1610612736, 0, 327689, -1610612736, 0, 327690, 0, 0, 327691, 0, 0, 327692, -1610612736, 0, 327693, -1610612736, 0, 327694, -1610612736, 0, 327695, -1610612736, 0, 327698, -1610612736, 0, 393231, -1610612736, 0, 393234, -1610612736, 0, 458767, -1610612736, 0, 458770, -1610612736, 0, 524303, -1610612736, 0, 524306, -1610612736, 0, 589839, -1610612736, 0, 589842, -1610612736, 0, 655375, -1610612736, 0, 655376, -1610612736, 0, 655377, -1610612736, 0, 655378, -1610612736, 0 )
+
+[node name="Zombie7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 261, -412 )
+
+[node name="Survivor5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 620, -1116 )
+
+[node name="Survivor6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2097, -1015 )
+
+[node name="Area2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( -341, -198 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -126, -292 )
+
+[node name="Zombie8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 98, 430 )
+
+[node name="Zombie9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 332, -15 )
+
+[node name="Zombie10" parent="." instance=ExtResource( 3 )]
+position = Vector2( -278, -1028 )
+
+[node name="Zombie11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 233, -808 )
+
+[node name="Zombie12" parent="." instance=ExtResource( 3 )]
+position = Vector2( -130, 202 )
+
+[node name="Zombie13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 885, -323 )
+
+[node name="Zombie14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 849, -76 )
+
+[node name="Zombie15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 997, -597 )
+
+[node name="Zombie16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 700, -826 )
+
+[node name="Zombie17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 660, 99 )
+
+[node name="Zombie18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1226, 67 )
+
+[node name="Zombie19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1482, 382 )
+
+[node name="Zombie20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1782, 503 )
+
+[node name="Zombie21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1715, 54 )
+
+[node name="Zombie22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1419, 507 )
+
+[node name="Zombie23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1845, -135 )
+
+[node name="Zombie24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2079, 31 )
+
+[node name="Zombie25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1342, -458 )
+
+[node name="Zombie26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1832, -471 )
+
+[node name="Zombie27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1033, -916 )
+
+[node name="Zombie28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1383, -876 )
+
+[node name="Zombie29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1553, -871 )
+
+[node name="Zombie30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2133, -350 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -504, -267 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1572, 524 )
+
+[node name="Area2D5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1596, -981 )
+
+[node name="Area2D6" type="Area2D" parent="."]
+position = Vector2( 2176, 1102 )
+scale = Vector2( 1.27869, 0.353816 )
+z_index = -1
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2( 0, -1 )
+shape = SubResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="Area2D6"]
+modulate = Color( 0.294118, 0.286275, 0.592157, 1 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.447059, 0.14902, 0.14902, 1 )
+position = Vector2( 329, 53.5001 )
+scale = Vector2( 27.13, 18.365 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[connection signal="body_entered" from="Area2D6" to="Area2D6" method="_on_Area2D6_body_entered"]
